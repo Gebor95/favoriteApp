@@ -3,14 +3,18 @@ import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
+  
 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  // var size,height,width;
   @override
   Widget build(BuildContext context) {
+   var  size = MediaQuery.of(context).size;
+    var height = size.height;
     return Scaffold(
       backgroundColor: Colors.deepPurple[100],
       appBar: AppBar(
@@ -55,10 +59,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
 },
               child: const Text('Favorite Items'),
                ),
-               const SizedBox(height: 62,),
+                SizedBox(height: height/9,),
                Container(
               width: double.infinity,
-              height: 422,
+              height: height/2,
               decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(40), topRight: Radius.circular(40))
@@ -66,14 +70,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: Column(
                 children:  [
                   Padding(
-                    padding: const EdgeInsets.only(top:48.0, left: 18.0, bottom: 18.0, right: 18.0),
+                    padding: const EdgeInsets.only(top:38.0, left: 8.0, bottom: 8.0, right: 8.0),
                     child: ListTile(
                       leading:  Container(width:50, height:50, decoration: BoxDecoration(color:Colors.amber[100], borderRadius: BorderRadius.circular(10)),child: const Icon(Icons.chat_bubble, color: Colors.amber,)),
                       title: const Padding(
                         padding:  EdgeInsets.only(left: 18.0),
                         child:  Text(
                           'Start a chat',
-                          textScaleFactor: 1.3,
+                          textScaleFactor:1.1,
                         ),
                       ),
                       trailing: const Icon(Icons.chevron_right),
@@ -82,14 +86,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
                    Padding(
-                     padding: const EdgeInsets.all(18.0),
+                     padding: const EdgeInsets.all(8.0),
                      child: ListTile(
                       leading:  Container(width:50, height:50, decoration: BoxDecoration(color:Colors.green[100], borderRadius: BorderRadius.circular(10)),child: const Icon(Icons.person, color: Colors.green,)),
                       title: const Padding(
                         padding:  EdgeInsets.only(left: 18.0),
                         child:  Text(
                           'Expert replies',
-                          textScaleFactor: 1.3,
+                          textScaleFactor:1.1,
                         ),
                       ),
                       trailing: const Icon(Icons.chevron_right),
@@ -98,14 +102,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                    ),
                    Padding(
-                     padding: const EdgeInsets.all(18.0),
+                     padding: const EdgeInsets.all(8.0),
                      child: ListTile(
                       leading:  Container(width:50, height:50, decoration: BoxDecoration(color:Colors.red[100], borderRadius: BorderRadius.circular(10)),child: const Icon(Icons.star_border_outlined, color: Colors.red,)),
                       title: const Padding(
                         padding:  EdgeInsets.only(left: 18.0),
                         child:  Text(
                           'Review ratings',
-                          textScaleFactor: 1.3,
+                          textScaleFactor: 1.1,
                         ),
                       ),
                       trailing: const Icon(Icons.chevron_right),
@@ -114,14 +118,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                    ),
                    Padding(
-                     padding: const EdgeInsets.all(18.0),
+                     padding: const EdgeInsets.all(8.0),
                      child: ListTile(
                       leading:  Container(width:50, height:50, decoration: BoxDecoration(color:Colors.blue[100], borderRadius: BorderRadius.circular(10)),child: const Icon(Icons.quiz, color: Colors.blue,)),
                        title: const Padding(
                         padding:  EdgeInsets.only(left: 18.0),
                         child:  Text(
                           'Asked questions',
-                          textScaleFactor: 1.3,
+                          textScaleFactor:1.1,
                         ),
                       ),
                       trailing:  const Icon(Icons.chevron_right),
